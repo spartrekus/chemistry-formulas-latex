@@ -1,0 +1,85 @@
+
+/////////////////////////////////////////////////////////
+/// Package that requires texlive-science for chemfig
+/// (Unibeam)
+/////////////////////////////////////////////////////////
+
+\documentclass{article}
+\usepackage[version=4]{mhchem}
+
+\usepackage[index]{substances}
+
+\usepackage[utf8]{inputenc}
+\usepackage[index]{substances}
+\LoadSubstances{substances-examples}
+
+
+\newcommand{\unichem}[1]
+{
+\chem{#1}: & \chem{#1}[formula] \chem{#1}[structure] \\ 
+}
+
+
+\usepackage{chemfig}
+\definesubmol{\lmethyl}{C(-[2]H)(-[4]H)(-[6]H)}
+\definesubmol{\rmethyl}{C(-[2]H)(-[6]H)-H}
+\definesubmol{\tmethyl}{C(-[2]H)(-[4]H)-H}
+\definesubmol{\bmethyl}{C(-[4]H)(-[6]H)-H}
+
+\usepackage{chemfig}
+\begin{document}
+
+// \renewcommand{\arraystretch}{1.5}
+
+\begin{tabular}{rl}
+  Hydrogen: & \chemfig{H-H} \\
+  Oxygen:  &  \chemfig{O=O} \\
+  Ethyne:  &  \chemfig{H-C~C-H} \\
+\unichem{methane}
+\unichem{ethane}
+\unichem{propane}
+\unichem{butane}
+\unichem{pentane}
+\unichem{hexane}
+\unichem{heptane}
+\unichem{octane}
+\unichem{nonane}
+\unichem{decane}
+//\unichem{propanone}
+// \unichem{NaCl}
+// \unichem{HCl}
+// \unichem{HNO3}
+\unichem{H2SO4}
+// \unichem{acetone}
+\end{tabular}
+
+
+// Formula: 
+// \chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H}
+
+
+/*
+Methane (CH4): \chemfig{[,0.8]C(-[2]H)(-[4]H)(-[6]H)-H}
+\smallskip
+Ethane Formula (C2H6):
+\chemfig{!\lmethyl-!\rmethyl}
+\smallskip
+*/
+
+
+
+
+
+/*
+\chem{methane} \\ 
+\chem{methane}[formula] \\ 
+\chem{methane}[structure] \\ 
+*/
+
+
+
+
+
+\end{document}
+
+ 
