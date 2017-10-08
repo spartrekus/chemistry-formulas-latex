@@ -16,7 +16,7 @@
 
 \newcommand{\unichem}[1]
 {
-\chem{#1}: & \chem{#1}[formula] \chem{#1}[structure] \\ 
+\chem{#1} (\chem{#1}[formula]):  &  \chem{#1}[structure] \\ 
 }
 
 
